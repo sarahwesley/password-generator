@@ -24,6 +24,21 @@ function generatePassword() {
 
   // tell the user how many characters their password will be
   window.alert("Your password will have " + confirmLength + " characters.");
+// choose parameters of password
+  var confirmSpecialChar = window.confirm("Click OK to confirm if you'd like to include special characters in your password.");
+  var confirmNumericChar = window.confirm("Click OK to confirm if you'd like to include numbers in your password.");
+  var confirmUpperCase = window.confirm("Click OK to confirm if you'd like to include upper case letters in your password.");
+  var confirmLowerCase = window.confirm("Click OK to confirm if you'd like to include lower case letters in your password.");
+
+  // ensure answers fit parameters
+    while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecialChar === false && confirmNumericChar === false) {
+      window.alert("you must choose at least one");
+      var confirmSpecialChar = window.confirm("Click OK to confirm if you'd like to include special characters in your password.");
+      var confirmNumericChar = window.confirm("Click OK to confirm if you'd like to include numbers in your password.");
+      var confirmUpperCase = window.confirm("Click OK to confirm if you'd like to include upper case letters in your password.");
+      var confirmLowerCase = window.confirm("Click OK to confirm if you'd like to include lower case letters in your password.");
+    }
+
 
 }
 
