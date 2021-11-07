@@ -70,7 +70,7 @@ function generatePassword() {
       window.alert("Your password will contain lowercase letters!");
       }
   }
-
+  // create action for password parameters
   var passwordChar = []
     if (confirmSpecialChar) {
     passwordChar = passwordChar.concat(specialChar)
